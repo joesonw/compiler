@@ -1,0 +1,6 @@
+Qiaosen Huang 4.0
+	c++,debug,coordination and data structure
+Andrew Tomaka 4.0
+	c++,test batches and data structure
+Anselmo Pontes 4.0
+	assembly,test files/examples,examples of each project and detec even minor errors of the program.

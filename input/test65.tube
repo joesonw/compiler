@@ -1,0 +1,3 @@
+int alpha; char beep; array (int) gama; array (char) delta; string phi;
+alpha[0]=1;
+beep[0]='a';

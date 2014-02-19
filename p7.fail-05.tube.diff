@@ -1,0 +1,5 @@
+--- mine.err	2013-12-08 20:45:59.323562000 -0500
++++ prof.err	2013-12-08 20:45:59.327560000 -0500
+@@ -1 +1 @@
+-ERROR(line 8): function 'fail5' never fully defined!
++ERROR(line 5): Expected 3 arguments in definition for function 'fail5' but received 2

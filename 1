@@ -1,0 +1,300 @@
+val_copy 55535 regG
+val_copy 5 regH
+jump start
+##system predefined routines
+##CHECK_INDEX_OUT_BOUNDS()
+check_index_out_bounds:
+sub regG 1 regG
+load regG regF
+val_copy regF IP
+##ARRAY_RESIZE()
+array_resize:
+load regA regD
+test_gtr regB regD regE
+jump_if_n0 regE array_move
+store regB regA
+jump end_array_resize
+array_move:
+add regH regB regF
+test_lte regF 55535 regE
+jump_if_0 regE ARRAY_RESIZE_ERROR
+store regB regH
+store regH regC
+val_copy regH regF
+add regH regB regH
+add regH 1 regH
+array_resize_loop:
+sub regD 1 regD
+test_gte regD 0 regE
+jump_if_0 regE end_array_resize
+add 1 regA regA
+add 1 regF regF
+mem_copy regA regF
+jump array_resize_loop
+end_array_resize:
+sub regG 1 regG
+load regG regF
+val_copy regF IP
+#PUSH_ARRAY
+push_array:
+sub regG 1 regG
+load regG regF
+load regA regB
+load regB regC
+test_gtr regC 0 regD
+jump_if_0 regD push_array_1
+out_char 'n'
+out_char 'o'
+out_char 'n'
+out_char '-'
+out_char '0'
+out_char '\n'
+val_copy regB regE
+add regE regC regE
+push_array_0:
+load regE regD
+store regD regG
+add regG 1 regG
+out_int regE
+out_char '\n'
+sub regE 1 regE
+test_gtr regE regB regD
+jump_if_n0 regD push_array_0
+push_array_1:
+store regC regG
+add regG 1 regG
+store regB regG
+add regG 1 regG
+store regF regG
+add regG 1 regG
+sub regG 1 regG
+load regG regF
+val_copy regF IP
+#POP_ARRAY
+pop_array:
+sub regG 1 regG
+load regG regF
+sub regG 1 regG
+load regG regB
+store regB regA
+sub regG 1 regG
+load regG regC
+store regC regB
+pop_array_1:
+test_gtr regC 0 regD
+jump_if_0 regD pop_array_0
+add regB 1 regB
+sub regC 1 regC
+sub regG 1 regG
+load regG regD
+store regD regB
+jump pop_array_1
+pop_array_0:
+store regF regG
+add regG 1 regG
+sub regG 1 regG
+load regG regF
+val_copy regF IP
+start:
+###StartProgram:   
+StartProgram:   
+###jump end_function_Scope1func  
+jump end_function_Scope1func
+###function_Scope1func:   
+function_Scope1func:   
+###mult s1 2 s2
+load 1 regA
+val_copy 2 regB
+mult regA regB regC
+store regC 2
+###val_copy s2 s0 
+load 2 regA
+store regA 0
+###ret   
+sub regG 1 regG
+load regG regF
+val_copy regF IP
+###out_char 'W'  
+val_copy 'W' regA
+out_char regA
+###out_char 'A'  
+val_copy 'A' regA
+out_char regA
+###out_char 'R'  
+val_copy 'R' regA
+out_char regA
+###out_char 'N'  
+val_copy 'N' regA
+out_char regA
+###out_char 'I'  
+val_copy 'I' regA
+out_char regA
+###out_char 'N'  
+val_copy 'N' regA
+out_char regA
+###out_char 'G'  
+val_copy 'G' regA
+out_char regA
+###out_char ':'  
+val_copy ':' regA
+out_char regA
+###out_char ' '  
+val_copy ' ' regA
+out_char regA
+###out_char 't'  
+val_copy 't' regA
+out_char regA
+###out_char 'h'  
+val_copy 'h' regA
+out_char regA
+###out_char 'e'  
+val_copy 'e' regA
+out_char regA
+###out_char 'r'  
+val_copy 'r' regA
+out_char regA
+###out_char 'e'  
+val_copy 'e' regA
+out_char regA
+###out_char ' '  
+val_copy ' ' regA
+out_char regA
+###out_char 'i'  
+val_copy 'i' regA
+out_char regA
+###out_char 's'  
+val_copy 's' regA
+out_char regA
+###out_char ' '  
+val_copy ' ' regA
+out_char regA
+###out_char 'n'  
+val_copy 'n' regA
+out_char regA
+###out_char 'o'  
+val_copy 'o' regA
+out_char regA
+###out_char ' '  
+val_copy ' ' regA
+out_char regA
+###out_char 'r'  
+val_copy 'r' regA
+out_char regA
+###out_char 'e'  
+val_copy 'e' regA
+out_char regA
+###out_char 't'  
+val_copy 't' regA
+out_char regA
+###out_char 'u'  
+val_copy 'u' regA
+out_char regA
+###out_char 'r'  
+val_copy 'r' regA
+out_char regA
+###out_char 'n'  
+val_copy 'n' regA
+out_char regA
+###out_char ' '  
+val_copy ' ' regA
+out_char regA
+###out_char 'v'  
+val_copy 'v' regA
+out_char regA
+###out_char 'a'  
+val_copy 'a' regA
+out_char regA
+###out_char 'l'  
+val_copy 'l' regA
+out_char regA
+###out_char 'u'  
+val_copy 'u' regA
+out_char regA
+###out_char 'e'  
+val_copy 'e' regA
+out_char regA
+###out_char ' '  
+val_copy ' ' regA
+out_char regA
+###out_char 'f'  
+val_copy 'f' regA
+out_char regA
+###out_char 'o'  
+val_copy 'o' regA
+out_char regA
+###out_char 'r'  
+val_copy 'r' regA
+out_char regA
+###out_char ' '  
+val_copy ' ' regA
+out_char regA
+###out_char 'f'  
+val_copy 'f' regA
+out_char regA
+###out_char 'u'  
+val_copy 'u' regA
+out_char regA
+###out_char 'n'  
+val_copy 'n' regA
+out_char regA
+###out_char 'c'  
+val_copy 'c' regA
+out_char regA
+###out_char 't'  
+val_copy 't' regA
+out_char regA
+###out_char 'i'  
+val_copy 'i' regA
+out_char regA
+###out_char 'o'  
+val_copy 'o' regA
+out_char regA
+###out_char 'n'  
+val_copy 'n' regA
+out_char regA
+###out_char ':'  
+val_copy ':' regA
+out_char regA
+###out_char 'f'  
+val_copy 'f' regA
+out_char regA
+###out_char 'u'  
+val_copy 'u' regA
+out_char regA
+###out_char 'n'  
+val_copy 'n' regA
+out_char regA
+###out_char 'c'  
+val_copy 'c' regA
+out_char regA
+###out_char '\n'  
+val_copy '\n' regA
+out_char regA
+###ret   
+sub regG 1 regG
+load regG regF
+val_copy regF IP
+###end_function_Scope1func:   
+end_function_Scope1func:   
+###val_copy 2 s1 
+val_copy 2 regA
+store regA 1
+###call function_Scope1func  
+val_copy IP regF
+add regF 5 regF
+store regF regG
+add regG 1 regG
+jump function_Scope1func
+###val_copy s0 s4 
+load 0 regA
+store regA 4
+###out_int s4  
+load 4 regA
+out_int regA
+###out_char '\n'  
+val_copy '\n' regA
+out_char regA
+jump EndProgram
+ARRAY_RESIZE_ERROR:
+jump EndProgram
+EndProgram:

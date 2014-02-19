@@ -1,0 +1,10 @@
+int alpha; char beep; array (int) gama; array (char) delta; string phi;
+while (delta) print 40;
+while (gama) print 50;
+while (phi) print 60;
+while (delta[3]*phi[0]) print 70;
+
+
+
+
+

@@ -1,0 +1,6 @@
+char test;
+if(test) print 5;
+
+
+
+print "Example";

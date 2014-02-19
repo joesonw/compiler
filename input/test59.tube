@@ -1,0 +1,6 @@
+int alpha; char beep; array (int) gama; array (char) delta; string phi;
+print 4+beep;
+
+
+
+

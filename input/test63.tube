@@ -1,0 +1,8 @@
+int alpha; char beep; array (int) gama; array (char) delta; string phi;
+if (delta) print 40;
+if (gama) print 50;
+if (gama+phi) print 60;
+if (delta*phi) print 70;
+
+
+

@@ -1,0 +1,5 @@
+--- mine.err	2013-12-08 20:45:59.251564000 -0500
++++ prof.err	2013-12-08 20:45:59.254566000 -0500
+@@ -1 +1 @@
+-ERROR(line 8): function 'fail2' never fully defined!
++ERROR(line 5): Expected argument 1 in definition for function 'fail2' to be of type array(char), but received type int.

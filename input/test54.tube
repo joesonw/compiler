@@ -1,0 +1,12 @@
+int alpha; char beep; array (int) gama; array (char) delta; string phi;
+# alpha=beep;
+# alpha='d';
+# beep = 33;
+# beep = alpha;
+
+# phi = 2;
+phi="table";
+delta ="chair";
+gama =99;
+
+

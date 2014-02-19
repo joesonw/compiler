@@ -1,0 +1,5 @@
+--- mine.err	2013-12-08 20:45:59.225566000 -0500
++++ prof.err	2013-12-08 20:45:59.229566000 -0500
+@@ -1 +1 @@
+-ERROR(line 5): Attempting to define function 'fail1', with return type 'array(int)' but previously declared as type 'int'.
++ERROR(line 5): Attempting to define function 'fail1', with return type 'array(int), but previously declared as type 'int'.

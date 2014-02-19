@@ -1,0 +1,22 @@
+int a = 1;
+int b = 1;
+int x = 1;
+while (a < 3) {
+	b = 1;
+	while (b < 5) {
+		x = 1;
+        	while (x < 8) {
+            		if (x==3)
+            		{
+                		print "break";
+               			break;
+            		}
+			print "x=",x;
+            		x += 1;
+        	}
+		print "b=",b;
+		b += 1;
+	}
+	print "a=",a;
+	a += 1;
+}

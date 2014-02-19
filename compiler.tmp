@@ -1,0 +1,254 @@
+StartProgram:
+ar_set_siz a2 0
+ar_resize a2 10
+random 8 s3
+val_copy s3 s2
+add s2 1 s4
+ar_set_idx a2 0 s4
+add s2 2 s5
+ar_set_idx a2 1 s5
+add s2 1 s6
+ar_set_idx a2 2 s6
+add s2 1 s7
+ar_get_idx a2 0 s8
+test_equ s8 s7 s9
+val_copy 0 s10
+jump_if_0 s9 Label0
+add s2 2 s11
+ar_get_idx a2 1 s12
+test_equ s12 s11 s13
+jump_if_0 s13 Label0
+val_copy 1 s10
+Label0:
+jump_if_0 s10 Label1
+add s2 2 s14
+ar_set_idx a2 3 s14
+jump Label2
+Label1:
+Label2:
+add s2 1 s15
+ar_get_idx a2 0 s16
+test_equ s16 s15 s17
+val_copy 0 s18
+jump_if_0 s17 Label3
+add s2 2 s19
+ar_get_idx a2 1 s20
+test_equ s20 s19 s21
+jump_if_0 s21 Label3
+val_copy 1 s18
+Label3:
+jump_if_0 s18 Label4
+add s2 1 s22
+add s22 s2 s23
+add s23 1 s24
+sub s24 s2 s25
+add s25 1 s26
+ar_set_idx a2 4 s26
+jump Label5
+Label4:
+Label5:
+add s2 2 s27
+ar_set_idx a2 5 s27
+ar_set_siz a3 0
+ar_get_siz a2 s29
+ar_set_siz a1 s29
+val_copy 0 s30
+Label7:
+test_less s30 s29 s32
+jump_if_0 s32 Label6
+ar_get_idx a2 s30 s31
+ar_set_idx a1 s30 s31
+add s30 1 s30
+jump Label7
+Label6:
+val_copy s2 s0
+call function_Scope1doLoop
+ar_get_siz a0 s33
+ar_set_siz a3 s33
+val_copy 0 s34
+Label9:
+test_less s34 s33 s36
+jump_if_0 s36 Label8
+ar_get_idx a0 s34 s35
+ar_set_idx a3 s34 s35
+add s34 1 s34
+jump Label9
+Label8:
+ar_get_siz a3 s37
+ar_set_siz a2 s37
+val_copy 0 s38
+Label11:
+test_less s38 s37 s40
+jump_if_0 s40 Label10
+ar_get_idx a3 s38 s39
+ar_set_idx a2 s38 s39
+add s38 1 s38
+jump Label11
+Label10:
+ar_get_siz a2 s42
+val_copy 0 s41
+Label13:
+test_less s41 s42 s43
+jump_if_0 s43 Label12
+ar_get_idx a2 s41 s43
+out_int s43
+add s41 1 s41
+jump Label13
+Label12:
+out_char '\n'
+jump end_function_Scope1doLoop
+function_Scope1doLoop:
+val_copy 0 s45
+Label14:
+test_less s45 4 s46
+jump_if_0 s46 Label15
+add 5 1 s47
+add s47 s45 s48
+mod s45 2 s49
+add s0 s49 s50
+add s50 1 s51
+ar_set_idx a1 s48 s51
+add 5 1 s52
+add s52 s45 s53
+mod s45 2 s54
+add s0 s54 s55
+add s55 1 s56
+ar_set_idx a1 s53 s56
+add 5 1 s57
+add s57 s45 s58
+mod s45 2 s59
+add s0 s59 s60
+add s60 1 s61
+ar_set_idx a1 s58 s61
+jump_if_0 1 Label16
+add 5 1 s62
+add s62 s45 s63
+mod s45 2 s64
+add s0 s64 s65
+add s65 1 s66
+ar_set_idx a1 s63 s66
+jump Label17
+Label16:
+Label17:
+jump_if_0 1 Label18
+add 5 1 s67
+add s67 s45 s68
+mod s45 2 s69
+add s0 s69 s70
+add s70 1 s71
+ar_set_idx a1 s68 s71
+jump Label19
+Label18:
+Label19:
+jump_if_0 1 Label20
+add 5 1 s72
+add s72 s45 s73
+mod s45 2 s74
+add s0 s74 s75
+add s75 1 s76
+ar_set_idx a1 s73 s76
+jump Label21
+Label20:
+Label21:
+jump_if_0 0 Label22
+add 5 1 s77
+add s77 s45 s78
+mod s45 2 s79
+add s0 s79 s80
+add s80 1 s81
+ar_set_idx a1 s78 s81
+jump Label23
+Label22:
+Label23:
+jump_if_0 0 Label24
+add 5 1 s82
+add s82 s45 s83
+mod s45 2 s84
+add s0 s84 s85
+add s85 1 s86
+ar_set_idx a1 s83 s86
+jump Label25
+Label24:
+Label25:
+jump_if_0 0 Label26
+add 5 1 s87
+add s87 s45 s88
+mod s45 2 s89
+add s0 s89 s90
+add s90 1 s91
+ar_set_idx a1 s88 s91
+jump Label27
+Label26:
+Label27:
+add s45 1 s92
+val_copy s92 s45
+jump Label14
+Label15:
+ar_get_siz a1 s93
+ar_set_siz a0 s93
+val_copy 0 s94
+Label29:
+test_less s94 s93 s96
+jump_if_0 s96 Label28
+ar_get_idx a1 s94 s95
+ar_set_idx a0 s94 s95
+add s94 1 s94
+jump Label29
+Label28:
+ret
+out_char 'W'
+out_char 'A'
+out_char 'R'
+out_char 'N'
+out_char 'I'
+out_char 'N'
+out_char 'G'
+out_char ':'
+out_char ' '
+out_char 't'
+out_char 'h'
+out_char 'e'
+out_char 'r'
+out_char 'e'
+out_char ' '
+out_char 'i'
+out_char 's'
+out_char ' '
+out_char 'n'
+out_char 'o'
+out_char ' '
+out_char 'r'
+out_char 'e'
+out_char 't'
+out_char 'u'
+out_char 'r'
+out_char 'n'
+out_char ' '
+out_char 'v'
+out_char 'a'
+out_char 'l'
+out_char 'u'
+out_char 'e'
+out_char ' '
+out_char 'f'
+out_char 'o'
+out_char 'r'
+out_char ' '
+out_char 'f'
+out_char 'u'
+out_char 'n'
+out_char 'c'
+out_char 't'
+out_char 'i'
+out_char 'o'
+out_char 'n'
+out_char ':'
+out_char 'd'
+out_char 'o'
+out_char 'L'
+out_char 'o'
+out_char 'o'
+out_char 'p'
+out_char '\n'
+ret
+end_function_Scope1doLoop:

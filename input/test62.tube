@@ -1,0 +1,2 @@
+int alpha; char beep; array (int) gama; array (char) delta; string phi;
+if (alpha>'A') print 10;

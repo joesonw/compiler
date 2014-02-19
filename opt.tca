@@ -1,0 +1,14 @@
+val_copy 0 regA
+val_copy 0 regB
+loop:
+test_less regA 10 regC
+jump_if_0 regC end
+random 10 regC
+add regC regB regB
+add regA 1 regA
+out_int regC
+out_char '\n'
+jump loop
+end:
+out_int regB
+out_char '\n'

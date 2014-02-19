@@ -1,0 +1,19 @@
+int alpha; char beep; array (int) gama; array (char) delta; string phi;
+beep='1';
+phi="table";
+delta ="chair";
+phi = delta;
+delta = "bat";
+phi = delta;
+phi[0]='c';
+#phi[2]="n";
+#delta[beep]='3';
+#beep="1";
+phi[10]='c';
+alpha=55;
+delta[alpha]='3';
+delta[4]='35';
+
+
+
+
